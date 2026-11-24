@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="ro">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="color-scheme" content="light dark">
+  <title>Promptly</title>
+  <link rel="icon" href="icon.svg" type="image/svg+xml">
+  <link rel="apple-touch-icon" href="icon.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <div class="brand">
+      <svg class="mascot" viewBox="0 0 12 11" width="24" height="22" shape-rendering="crispEdges" aria-hidden="true">
+        <g fill="currentColor">
+          <rect x="5" y="0" width="2" height="2"/>
+          <rect x="2" y="2" width="8" height="1"/>
+          <rect x="1" y="3" width="10" height="6"/>
+          <rect x="2" y="9" width="8" height="1"/>
+          <rect x="0" y="5" width="1" height="2"/>
+          <rect x="11" y="5" width="1" height="2"/>
+          <rect x="3" y="10" width="2" height="1"/>
+          <rect x="7" y="10" width="2" height="1"/>
+        </g>
+        <g fill="var(--mascot-eye)">
+          <g class="eyes">
+            <rect x="3" y="5" width="2" height="2"/>
+            <rect x="7" y="5" width="2" height="2"/>
+          </g>
+          <rect x="5" y="7" width="2" height="1"/>
+        </g>
+      </svg>
+      <span class="brandname">Promptly</span>
+    </div>
+    <div id="modeseg" class="modeseg"></div>
+    <div class="actions">
+      <button id="presetsbtn" class="btn ghost" type="button" data-pop></button>
+      <div id="langseg"></div>
+      <button id="morebtn" class="icon-btn" type="button" data-pop></button>
+    </div>
+  </header>
+
+  <div class="app">
+    <nav id="sidebar" class="side">
+      <div id="sidecap" class="side-cap"></div>
+      <div id="nav" class="nav"></div>
+    </nav>
+
+    <main id="main" class="main">
+      <div id="content" class="content"></div>
+    </main>
+
+    <aside id="preview" class="preview">
+      <div class="pv-head">
+        <button id="expand" class="expand" type="button" aria-expanded="false"></button>
+        <div id="fmtseg"></div>
+        <button id="copy" class="btn primary" type="button"></button>
+      </div>
+      <div class="pv-body">
+        <div id="out" class="out" tabindex="0"></div>
+        <div id="empty" class="empty"></div>
+      </div>
+      <div class="pv-foot">
+        <span id="hint" class="hint"></span>
+        <span id="count" class="count"></span>
+      </div>
+    </aside>
+  </div>
+
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="data.js"></script>
+  <script src="app.js"></script>
+</body>
+</html>
